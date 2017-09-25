@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Mightype';
+	src: url('./assets/font/Mightype/MightypeScript/MightypeScript.otf');
+}
+@font-face {
+	font-family: 'Canvas';
+	src: url('./assets/font/Canvas/SalvadorCondensed/TheSalvador-Condensed.otf')
+}
+body {
+	height: 100%;
+	overflow: auto;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+	height:auto;
+  max-height:100%;
+  overflow: hidden;
+}
+
+.bg {
+	background-repeat: no-repeat;
+	width: 100%;
+  z-index: -1;
+  position: absolute;
+	min-width: 1000px;
+	margin-top: -170px
+}
+
+.forestImg {
+	position: absolute;
+	min-width: 1000px;
+	width: 100%;
+	background-size: cover;
+	z-index: 0;
+}
+
+a {
+	color: white;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: #89043D;
+}
+.aboutIntro {
+	height: 400px
+}
