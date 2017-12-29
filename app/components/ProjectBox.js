@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap';
 
 export default class ProjectBox extends Component {
 	constructor(props){
@@ -10,9 +11,11 @@ export default class ProjectBox extends Component {
 	renderGreyBox() {
 			return(
 				<div style={this.state.isHighlighted ? styles.styleGrey : styles.styleClear} onMouseOver={this.greyMouseOver.bind(this)}>
-					<img src={this.props.imgSrc} height={200} style={styles.imgStyle}/>
+					<img src={this.props.imgSrc} style={styles.imgStyle}/>
 					<h1 style={styles.projectTitle}>{this.props.title}</h1>
 					<h3 style={styles.projectContent}>{this.props.context}</h3>
+					<h4 style={styles.projectTech}>{this.props.tech}</h4>
+					<Button bsSize="large" className="btn btn-primary-outline" href={this.props.link}>View</Button>
 				</div>
 			)
 	}
@@ -29,7 +32,7 @@ export default class ProjectBox extends Component {
 	render() {
 		return (
 			<div>
-				<div className="col-lg-6 col-lg-offset-3" onMouseEnter={this.greyMouseOver.bind(this)} onMouseOut={this.greyMouseOut.bind(this)}>
+				<div className="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" onMouseEnter={this.greyMouseOver.bind(this)} onMouseOut={this.greyMouseOut.bind(this)}>
 					{this.renderGreyBox()}
 				</div>
 			</div>
@@ -37,6 +40,10 @@ export default class ProjectBox extends Component {
 	}
 }
 const styles = {
+	projectTech: {
+		fontFamily:"Canvas",
+		padding: "0% 5% 3% 5%"
+	},
 	projectTitle: {
 		fontFamily:"Mightype",
 		fontSize: "45px",
@@ -45,7 +52,7 @@ const styles = {
 	},
 	projectContent: {
 		fontFamily:"Canvas",
-		padding: "0% 5% 10% 5%"
+		padding: "0% 5% 0% 5%"
 	},
 	styleGrey: {
 		textAlign:"center",
@@ -63,5 +70,7 @@ const styles = {
 	imgStyle: {
 		width:"100%",
 		marginBottom:"5%",
+		border:"1px solid #9E788F",
+		height:"350px"
 	},
 }

@@ -86,82 +86,63 @@ export default class Contact extends Component {
   }
 	render(){
 		return (
-			<div>
-				<div className="row" style={contactBox}>
-					<div className="col-lg-1" style={first}>
-						<div className="col-lg-12">
-              <a
-                href="//linkedin.com/in/olivia-stalcup"
-                target="_blank"
-                onMouseOver={this.handleMouseOverLinkedIn.bind(this)}
-                onMouseOut={this.LinkedInMouseOut.bind(this)}>
-                  <img src={this.state.linkedInImg} />
-              </a>
-            </div>
-            <div className="col-lg-4 col-lg-offset-1">
-              {this.renderLinkedIn()}
-            </div>
+			<div className="row">
+   			<div className="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-4">
+					<div className="row" style={styles.contactBox}>
+						<div className="col-sm-4 col-md-4 col-lg-2" style={styles.box}>
+								<a
+									href="//linkedin.com/in/olivia-stalcup"
+									target="_blank"
+									onMouseOver={this.handleMouseOverLinkedIn.bind(this)}
+									onMouseOut={this.LinkedInMouseOut.bind(this)}>
+											<img src={this.state.linkedInImg} />
+								</a>
+								{this.renderLinkedIn()}
+						</div>
+						<div className="col-sm-4 col-md-4 col-lg-2" style={styles.box}>
+								<a
+									href="//github.com/olivia-char"
+									target="_blank"
+									onMouseOver={this.handleMouseOverGithub.bind(this)}
+									onMouseOut={this.GithubMouseOut.bind(this)}
+								>
+									<img src={this.state.githubImg} />
+								</a>
+								{this.renderGithub()}
+						</div>
+						<div className="col-sm-4 col-md-4 col-lg-2" style={styles.box}>
+							<Mailto
+								email="ocstalcup@gmail.com"
+								obfuscate={true}
+								onMouseOver={this.handleMouseOverEmail.bind(this)}
+								onMouseOut={this.EmailMouseOut.bind(this)}
+							>
+								<img src={this.state.atSignImg} />
+							</Mailto>
+							{this.renderEmail()}
+						</div>
 					</div>
-          <div className="col-lg-1" style={center}>
-            <div className="col-lg-12">
-              <a
-                href="//github.com/olivia-char"
-                target="_blank"
-                onMouseOver={this.handleMouseOverGithub.bind(this)}
-                onMouseOut={this.GithubMouseOut.bind(this)}
-              >
-                <img src={this.state.githubImg} />
-              </a>
-            </div>
-            <div className="col-lg-4 col-lg-offset-2">
-              {this.renderGithub()}
-            </div>
-          </div>
-					<div className="col-lg-1" style={last}>
-						<Mailto
-              email="ocstalcup@gmail.com"
-              obfuscate={true}
-              onMouseOver={this.handleMouseOverEmail.bind(this)}
-              onMouseOut={this.EmailMouseOut.bind(this)}
-            >
-        			<img src={this.state.atSignImg} />
-      			</Mailto>
-      			{this.renderEmail()}
-					</div>
-				</div>
-			</div>
+      	</div>
+   		</div>
+
 
 		)
 	}
 }
-const compBlurb = {
-	paddingTop: '8%',
-  paddingLeft: '2%',
-  textAlign: 'center',
-  marginBottom: '2%'
-}
-const first = {
-  textAlign: 'left',
-  marginLeft: '35%',
-  height: '100px',
-  width: '150px',
-  padding: '0% 0% 0% 2%'
-}
-const center = {
-  textAlign: 'left',
-  paddingRight: '0%',
-  paddingLeft:"1%",
-  height: '100px',
-  width: '150px'
-}
-const last = {
-  textAlign: 'center',
-  paddingLeft: "0%",
-  height: '100px',
-  width: '150px'
-}
-const contactBox = {
-  marginBottom: "7%",
-  fontFamily:"Mightype",
-	color:"#272838"
+const styles = {
+	compBlurb: {
+		paddingTop: '8%',
+	  paddingLeft: '2%',
+	  textAlign: 'center',
+	  marginBottom: '2%'
+	},
+	box: {
+		textAlign: 'center',
+		height:'175px',
+	},
+	contactBox: {
+		marginBottom: "7%",
+		fontFamily:"Mightype",
+		color:"#272838"
+	}
 }

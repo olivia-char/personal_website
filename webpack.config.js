@@ -48,12 +48,12 @@ module.exports = {
     	}, {
  				test: /\.(eot|otf|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
 				loader: 'file-loader'
-    	}
+    	}, {
+ 				test: /\.(pdf|gif|png|jpe?g|svg)$/,
+  			loader: 'file?name=[path][name].[ext]',
+  			include: paths
+			},
 		],
-	
-
-
-
 	},
 	devServer: {
 		contentBase: PATHS.build,

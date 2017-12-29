@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Olivia from "../assets/img/bean.png"
-import NavBar from "./NavBar"
+import HeaderParallax from "./HeaderParallax.js"
 
 export default class LandingPage extends Component {
 	constructor(props){
@@ -24,7 +24,10 @@ export default class LandingPage extends Component {
 			<div className="noScrollWrapper">
 				<div className="container">
 					<img className="bg" src={Olivia} />
-					<NavBar style={{zIndex:0}}/>
+					<HeaderParallax
+						style={{zIndex:0}}
+						hasNoImage={true}
+					/>
 				</div>
 			</div>
 		)

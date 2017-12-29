@@ -10,7 +10,6 @@ body {
 	height: 100%;
 	overflow: auto;
 }
-
 .container {
 	width: 100%;
 	padding: 0;
@@ -42,8 +41,27 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color: #89043D;
+	color: #845A6D;
+}
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+a:active {
+	text-decoration: none;
+  color: white;
 }
 .aboutIntro {
 	height: 400px
+}
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+	margin-bottom: 5%;
+	color: white;
+	font-family: 'Canvas';
+}
+.btn-primary-outline:hover {
+	background-color: transparent;
+	color: #89043D;
 }
