@@ -61,7 +61,7 @@ export default class Portfolio extends Component {
 							imgSrc={BioPrintImg}
 							context="Professional website for a biomedical device company."
 							tech="Technologies Used - React.js, Webpack, Bootstrap"
-							link="/#/littleerror"
+							link="http://device.oliviastalcup.com"
 						/>
 					</div>
 				</StickyContainer>
@@ -104,7 +104,7 @@ export default class Portfolio extends Component {
 							imgSrc={WeatherImg}
 							context="Using the OpenWeatherMap API, you can enter your zip code to find your local weather forecast"
 							tech="Technologies Used - Bootstrap, OpenWeatherMap API "
-							link="/#/littleerror"
+							link="http://weather.oliviastalcup.com"
 						/>
 					</div>
     		</StickyContainer>
@@ -133,5 +133,3 @@ const styles = {
 		paddingBottom: "2%",
 	}
 }
-
-

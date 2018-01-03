@@ -15,7 +15,7 @@ export default class ProjectBox extends Component {
 					<h1 style={styles.projectTitle}>{this.props.title}</h1>
 					<h3 style={styles.projectContent}>{this.props.context}</h3>
 					<h4 style={styles.projectTech}>{this.props.tech}</h4>
-					<Button bsSize="large" className="btn btn-primary-outline" href={this.props.link}>View</Button>
+					<a href={this.props.link} target="_blank"><Button bsSize="large" className="btn btn-primary-outline">View</Button></a>
 				</div>
 			)
 	}
