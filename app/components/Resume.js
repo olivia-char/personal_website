@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ResumeImg from "../assets/img/tiles.png"
-import HeaderParallax from "./HeaderParallax"
+import ResumeImg from "../assets/img/tiles.png";
+import HeaderParallax from "./HeaderParallax";
 
 export default class Resume extends Component {
 	constructor(props){

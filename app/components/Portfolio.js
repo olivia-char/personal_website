@@ -52,7 +52,7 @@ export default class Portfolio extends Component {
 							imgSrc={GlenetImg}
 							context="Professional website for a Sonoma County Winery offering wines and memberships."
 							tech="Technologies Used - Ruby on Rails, React.js, Bootstrap, MailChimp"
-							link="/#/littleerror"
+							link="http://winery.oliviastalcup.com"
 						/>
 					</div>
 					<div className="row" style={styles.portfolioIntro}>
