@@ -51,7 +51,7 @@ export default class Resume extends Component {
 			 	</div>
 			 	<div className="row" style={styles.download}>
 			 		<div className="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
-						<a href={"#/littleerror"} style={styles.downloadButton} onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
+						<a href={"https://www.oliviastalcup.com/resume"} target="_blank" style={styles.downloadButton} onMouseEnter={this.colorMouseOver.bind(this)} onMouseOut={this.colorMouseOut.bind(this)}>
 							{this.renderPlain()}
 							{this.renderColor()}
 						</a>

@@ -34,9 +34,8 @@ const styles = {
 	contactIntro: {
 		fontFamily: "Canvas",
 		textAlign:"center",
-		padding:"3% 0% 3% 0%",
+		padding:"3% 5% 3% 5%",
 		borderTop: "1px solid #9CAFB7",
 		borderBottom: "1px solid #9CAFB7"
 	}
 }
-

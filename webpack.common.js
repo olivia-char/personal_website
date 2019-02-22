@@ -12,12 +12,13 @@ module.exports = {
     app: ['babel-polyfill', PATHS.app]
   },
   output: {
-    path: PATHS.build
+    path: PATHS.build,
+    filename: '[chunkhash]'
   },
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  module: { 
+  module: {
     rules: [
       {
         test: /\.css$/,

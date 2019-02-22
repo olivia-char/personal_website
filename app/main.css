@@ -13,7 +13,7 @@ body {
 .container {
 	width: 100%;
 	padding: 0;
-	height:auto;
+	height: auto;
   max-height:100%;
   overflow: hidden;
 }
@@ -21,12 +21,19 @@ body {
 .bg {
 	background-repeat: no-repeat;
 	width: 100%;
+	height: auto;
   z-index: -1;
   position: absolute;
 	min-width: 1000px;
-	margin-top: -170px
+	min-height: 1000px;
+	margin-top: -170px;
 }
+@media only screen and (min-width: 400px) {
+    .bg {
+        min-width: 700px;
 
+    }
+}
 .forestImg {
 	position: absolute;
 	min-width: 1000px;
@@ -41,7 +48,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color: #845A6D;
+	color: #a85277;
 }
 a:visited {
 	text-decoration: none;

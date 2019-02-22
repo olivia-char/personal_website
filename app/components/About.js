@@ -35,7 +35,7 @@ export default class About extends Component {
 			 	<div className="row">
 			 		<div className="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2" style={styles.AboutBlurb}>
 			 			<h4 style={styles.AboutContent}>I specialize in building fully functional websites, applications and RESTful API's, while integrating modern design.</h4>
-			 			<h4 style={styles.AboutContent}>For the last 3 years I taught myself to code. I began coding with Ruby, and expanded to both front-end and back-end development. I currenlty enjoy coding with React.js and Webpack. I graduated from the Coding Dojo in San Jose and currently freelance in the Bay Area.</h4>
+			 			<h4 style={styles.AboutContent}>I began teaching myself to code with Ruby, and expanded to both front-end and back-end development. I currenlty enjoy coding with React.js and Webpack. I graduated from the Coding Dojo in San Jose and currently freelance in the Bay Area.</h4>
 						<Button href="/#/portfolio" bsStyle={"success"} bsSize={"large"} style={{marginTop:"2%", marginBottom:"2%"}}>View Project Samples</Button>
 					</div>
 			 	</div>
@@ -70,4 +70,3 @@ const styles = {
 		marginBottom: '2%'
 	}
 }
-

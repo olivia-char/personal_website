@@ -17,7 +17,7 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
-	module: { 
+	module: {
 		rules: [
 			{
 				test: /\.(png|jpg|gif)$/,
@@ -26,7 +26,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192
-            }  
+            }
           }
         ]
 			}, {
@@ -71,4 +71,4 @@ module.exports = {
 		}),
 		new Webpack.HotModuleReplacementPlugin()
 	]
-} 
+}

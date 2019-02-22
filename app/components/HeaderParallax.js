@@ -53,18 +53,21 @@ export default class HeaderParallax extends Component {
 
 	render() {
 		return (
-
-			<Parallax strength={400} className="aboutIntro" bgStyle={this.props.bgStyle}>
-          <Background>
-          	<img src={this.props.imgSrc} onLoad={_=>this.generateTitle()}/>
-          </Background>
-          <NavBar title={this.state.title}/>
-					<div className="row">
-						<div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-3" style={styles.header}>
-						<h1 style={{fontSize:"95px"}}>{this.props.title}</h1>
+			<div className="row">
+   			<div className="col-sm-12 col-md-12 col-lg-12">
+					<Parallax strength={400} className="aboutIntro" bgStyle={this.props.bgStyle}>
+						<Background  className="col-sm-12 col-md-12 col-lg-12">
+							<img style={styles.headerImg} src={this.props.imgSrc} onLoad={_=>this.generateTitle()}/>
+						</Background>
+						<NavBar title={this.state.title}/>
+						<div className="row">
+							<div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-3" style={styles.header}>
+							<h1 style={{fontSize:"95px"}}>{this.props.title}</h1>
+							</div>
 						</div>
-					</div>
-      </Parallax>
+					</Parallax>
+      	</div>
+   		</div>
 
 		)
 	}
@@ -75,6 +78,9 @@ const styles = {
 		fontFamily: "Mightype",
 		marginTop: "5%",
 		textAlign: 'center',
-		textShadow: ".5px .5px black"
+		textShadow: "1px 1px black"
+	},
+	headerImg: {
+
 	}
 }

@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 
 export default class NavBar extends Component {
 	constructor(props){
-		super(props)
+		super(props);
+
 	}
+
+
 
 //empty title
 //for each space until end of name
@@ -18,16 +21,16 @@ export default class NavBar extends Component {
 						<h1 style={styles.titleName}>{this.props.title}</h1>
 					</div>
 					<div className="col-xs-12 col-sm-2 col-md-2 col-lg-1 col-lg-offset-3" style={styles.navButton}>
-						<a href="#/about"><h3>About</h3></a>
+						<a href="#/about"><h3 style={styles.blach}>About</h3></a>
 					</div>
 					<div className="col-xs-12 col-sm-2 col-md-2 col-lg-1" style={styles.navButton}>
-						<a href="#/resume"><h3>Resume</h3></a>
+						<a href="#/resume"><h3 style={styles.blach}>Resume</h3></a>
 					</div>
 					<div  className="col-xs-12 col-sm-2 col-md-2 col-lg-1" style={styles.navButton}>
-						<a href="#/portfolio"><h3>Portfolio</h3></a>
+						<a href="#/portfolio"><h3 style={styles.blach}>Portfolio</h3></a>
 					</div>
 					<div style={styles.navButton} className="col-xs-12 col-sm-2 col-md-2 col-lg-1">
-						<a href="#/contact"><h3>Contact</h3></a>
+						<a href="#/contact"><h3 style={styles.blach}>Contact</h3></a>
 					</div>
 				</div>
 
@@ -41,6 +44,7 @@ const styles = {
 		zIndex:"0",
 		margin:"0"
 	},
+
 	clearBackground: {
 		background: "linear-gradient(#89043D, transparent)",
 		opacity:".2",
@@ -49,12 +53,15 @@ const styles = {
 	},
 	titleName: {
 		fontSize:"50px",
-		textShadow: ".5px .5px black"
+		textShadow: "1px 1px black"
 	},
 	navButton: {
 		marginTop: "20px",
 		textAlign:"center",
-		textShadow: ".3px .3px black",
+		textShadow: "1px 1px black",
+	},
+	link: {
+		color: "white",
+		cursor: "pointer"
 	}
 }
-
