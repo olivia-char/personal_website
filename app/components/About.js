@@ -1,72 +1,105 @@
 import React, { Component } from 'react';
-import ForestImg from "../assets/img/forest.png"
-import HeaderParallax from "./HeaderParallax"
-import AboutPhoto from '../assets/img/oliviaImg.jpg'
-import ContactNavBar from './ContactNavBar'
-import Portfolio from './Portfolio'
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+
 
 export default class About extends Component {
 	constructor(props){
 		super(props)
 	}
-
 	render() {
 		return (
-			<div className="container">
-			 	<HeaderParallax
-			 		title="About"
-			 		imgSrc={ForestImg}
-			 		bgStyle={{marginTop: "-350px"}}
-			 	/>
-			 	<div className="row" style={styles.AboutTitle}>
-			 		<div className="col-xs-8 col-xs-offset-1 col-sm-4 col-md-4 col-lg-4 col-lg-offset-2">
-			 			<h1 style={styles.font}>Olivia Stalcup</h1>
-			 		</div>
-			 		<div className="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-1">
-			 			<h2 style={styles.font}>Full Stack Web Developer</h2>
-			 		</div>
-			 	</div>
-			 	<div className="row">
-			 		<div className="col-lg-6 col-lg-offset-3" style={styles.photo}>
-			 			<img src={AboutPhoto} height={400}/>
-			 		</div>
-			 	</div>
-			 	<div className="row">
-			 		<div className="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2" style={styles.AboutBlurb}>
-			 			<h4 style={styles.AboutContent}>I specialize in building fully functional websites, applications and RESTful API's, while integrating modern design.</h4>
-			 			<h4 style={styles.AboutContent}>I began teaching myself to code with Ruby, and expanded to both front-end and back-end development. I currenlty enjoy coding with React.js and Webpack. I graduated from the Coding Dojo in San Jose and currently freelance in the Bay Area.</h4>
-						<Button href="/#/portfolio" bsStyle={"success"} bsSize={"large"} style={{marginTop:"2%", marginBottom:"2%"}}>View Project Samples</Button>
-					</div>
-			 	</div>
-			 	<ContactNavBar />
+			<div className="row">
+        <div className="col-lg-10" style={styles.Info}>
+            <h2>THIS IS <span>THE</span> GAME CHANGER IN LANGUAGE LEARNING</h2>
+
+            <p>
+                If you've ever tried learning another language, you know how difficult it can be.
+                Endless memorizing and can't even put a sentence together to save your life...or even chat up the street vendor.
+            </p>
+            <div className="row">
+                <div className="col-lg-4" style={styles.InfoLogo}></div>
+                <div className="col-lg-6">
+                    <p>IS CHANGING ALL OF THAT. ONE LANGUAGE LEARNER AT A TIME.</p>
+                </div>
+            </div>
+            <p>
+                Our <span>revolutionary method</span> and our <span>innovative approach</span> are game changers in the language-learning space.
+                We've designed a platform to deliver everything you need to learn <span>real</span> actual language.
+                The way it is used in <span>real</span>, situations.
+                From the very first minute of study, we'll have you using the language like it's used every day.
+            </p>
+        </div>
+
+        <div className="col-lg-12">
+            <div className="row">
+                <div className="col-lg-6">
+                    <p>this is an info graphic</p>
+                    <h5>You'll Be Exposed To Real Language</h5>
+                    <p>
+                        People don't learn to use a language from endless vocab lists and countless verb conjugations.
+                        They learn from what is actually used, by actual people.
+                        And now, so will you.
+                    </p>
+                </div>
+                <div className="col-lg-6">
+                    <p>This is an info graphic</p>
+                    <h5>You'll Use What You Learn</h5>
+                    <p>
+                        No ridiculous translations.
+                        No meaningless phrases.
+                        Just the real stuff.
+                        Surrounded by the funnest activities ever!
+                    </p>
+                </div>
+                <div className="col-lg-6">
+                    <p>This is an info graphic</p>
+                    <h5>You'll Learn Like An Adult Does</h5>
+                    <p>
+                        We leverage the best of a natural approach to language teaching (i.e. your mom) and a structured approach to language learning (i.e. your highly-developed adult brain).
+                    </p>
+                </div>
+                <div className="col-lg-6">
+                    <p>This is an info graphic</p>
+                    <h5>You'll Think Create In The Language</h5>
+                    <p>
+                        You will never, ever need to tell a Parisian that <i>"The sun is yellow."</i>
+                        Which is why we're not wasting your time on ridiculous stuff like that or... Which one is "red"? Point to the "elephant". --- you're smart, you're solid... and so is <span>realLINGUA</span> by your side!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div className="col-lg-12" style={styles.CallToAction}>
+            <Link to="/" className="whiteButton">START LEARNING NOW</Link>
+            <h3>ADIOS ENDLESS VOCABULARY LISTS. ADIEU BORING VERB CONJUCTIONS.</h3>
+            <h3>Hola <span>real</span> language! Bonjour <span>realLINGUA!</span></h3>
+        </div>
 			</div>
+
 		)
 	}
 }
+
 const styles = {
-	photo: {
-		textAlign:"center",
-		padding: '3% 0% 3% 0%',
-		borderTop: "1px solid #8BBF9F",
-		borderBottom: "1px solid #8BBF9F",
+  span: {
+      fontWeight: "bold",
+  },
+  Info: {
+      borderTop: "1px solid #449ac8",
+      borderBottom: "1px solid #449ac8",
+  },
+	InlineLogo: {
+
+		backgroundRepeat: "no-repeat",
+		backgroundSize: "100%",
+		height: "100px"
 	},
-	AboutBlurb: {
-		textAlign:"center",
-		marginBottom: "4%",
-		fontFamily: 'Canvas',
-		color:"#272838"
-	},
-	AboutContent: {
-		marginTop:"2%",
-		fontSize:"22px"
-	},
-	font: {
-		fontFamily: 'Canvas',
-		color:"#27283"
-	},
-	AboutTitle: {
-		marginTop: '5%',
-		marginBottom: '2%'
+	CallToAction: {
+		marginTop: "5%",
+		padding: "2% 0% 2% 0%",
+		backgroundImage: "linear-gradient(to top, #007eb6,#FFFFFF)",
+		textAlign: "center",
+		color: "#FFFFFF"
 	}
 }
